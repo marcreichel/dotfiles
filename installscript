@@ -1,0 +1,108 @@
+#!/bin/bash
+
+# Hide "last login" line when starting a new terminal session
+touch $HOME/.hushlogin
+
+homedir='/Users/$(whoami)/'
+
+# Install zsh
+echo 'Install oh-my-zsh'
+echo '-----------------'
+rm -rf $HOME/.oh-my-zsh
+curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+# Add global gitignore
+ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
+git config --global core.excludefile $HOME/.global-gitignore
+
+# Symlink zsh prefs
+rm $HOME/.zshrc
+ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
+
+# Symlink vim prefs
+rm $HOME/.vimrc
+ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
+rm $HOME/.vim
+ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
+
+# Fix missing font characters (see https://github.com/robbyrussell/oh-my-zsh/issues/1906)
+cd ~/.oh-my-zsh/themes/
+git checkout d6a36b1 agnoster.zsh-theme
+
+# Activate z
+cd ~/.dotfiles/shell
+chmod +x z.sh
+
+echo 'Configure npm'
+echo '-------------'
+# Create a directory for global packages and tell npm where to store globally installed packages
+mkdir "${HOME}/.npm-packages"
+npm config set prefix "${HOME}/.npm-packages"
+
+echo 'Install homebrew'
+echo '----------------'
+echo install homebrew
+sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $homedir
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+echo 'Install node'
+echo '------------'
+brew install node
+
+echo 'Install pkg-config'
+brew install pkg-config
+
+echo 'Install wget'
+echo '------------'
+brew install wget
+
+echo 'Install some nice quicklook plugins'
+echo '-----------------------------------'
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip suspicious-package
+
+echo 'Install php'
+echo '-----------'
+brew install php@8.0
+
+echo 'Install composer'
+echo '----------------'
+EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+ACTUAL_COMPOSER_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+if [ "$EXPECTED_COMPOSER_CHECKSUM != "$ACTUAL_COMPOSER_CHECKSUM" ]
+then
+    >&2 echo 'Error: Invalid installer checksum'
+    rm composer-setup.php
+    exit 1
+fi
+php composer-setup.php
+rm composer-setup.php
+mv composer.phar /usr/local/bin/composer
+
+echo 'Install laravel valet'
+echo '---------------------'
+composer global require laravel/valet
+valet install
+
+echo 'Install zsh-autosuggestions'
+echo '---------------------------'
+brew install zsh-autosuggestions
+
+echo '++++++++++++++++++++++++++++++'
+echo '++++++++++++++++++++++++++++++'
+echo 'All done!'
+echo 'Things to do to make the agnoster terminal theme work:'
+echo '1. Install menlo patched font included in ~/.dotfiles/misc https://gist.github.com/qrush/1595572/raw/Menlo-Powerline.otf'
+echo '2. Install patched solarized theme included in ~/.dotfiles/misc'
+
+echo '++++++++++++++++++++++++++++++'
+echo 'Some optional tidbits'
+
+echo '1. Set some sensible defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
+echo '2. Make a ~/.dotfiles-custom/shell/.aliases for your personal commands'
+
+echo '++++++++++++++++++++++++++++++'
+echo '++++++++++++++++++++++++++++++'
+

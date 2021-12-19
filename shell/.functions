@@ -1,0 +1,46 @@
+# Run tests
+function p() {
+  if [ -f vendor/bin/pest ]; then
+    vendor/bin/pest "$@"
+  else
+    vendor/bin/phpunit "$@"
+  fi
+}
+
+function pf() {
+  if [ -f vendor/bin/pest ]; then
+    vendor/bin/pest --filter "$@"
+  else
+    vendor/bin/phpunit --filter "$@"
+  fi
+}
+
+# Docker
+function ssh-docker() {
+  docker exec -it "$@" bash
+}
+
+# Create a new directory and enter it
+function mkd() {
+  mkdir -p "$@" && cd "$@"
+}
+
+function archive() {
+  zip -r "$1".zip -i "$1" ;
+}
+
+# Commit everything
+function commit() {
+  commitMessage="$1"
+
+  if [ "$commitMessage" = "" ]; then
+    commitMessage="🚧 work in progress"
+  fi
+
+  git add .
+  eval "git commit -a -m '${commitMessage}'"
+}
+
+function silent() {
+  "$@" > /dev/null
+}
