@@ -65,6 +65,7 @@ brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatc
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
+brew link --overwrite --force php@8.0
 
 echo 'Install composer'
 echo '----------------'
