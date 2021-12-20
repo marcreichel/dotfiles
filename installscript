@@ -58,6 +58,10 @@ echo 'Install wget'
 echo '------------'
 brew install wget
 
+echo 'Install GitHub CLI'
+echo '------------------'
+brew install gh
+
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip suspicious-package
