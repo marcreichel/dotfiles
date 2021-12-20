@@ -107,11 +107,6 @@ echo '---------------------'
 composer global require laravel/valet
 valet install
 
-echo 'Install mysql'
-echo '-------------'
-brew install mysql
-brew services start mysql
-
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
