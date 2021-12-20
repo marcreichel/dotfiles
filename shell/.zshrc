@@ -73,9 +73,6 @@ export PATH=$HOME/.dotfiles/bin:$PATH
 # Import ssh keys in keychain
 ssh-add -A 2>/dev/null;
 
-# Enable autosuggestions
-source ~/.dotfiles/misc/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # Extra paths
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/usr/local/bin:$PATH

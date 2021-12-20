@@ -13,6 +13,23 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Set sidebar icon size to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+
+# Increase window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
 # Disable the "Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
@@ -60,6 +77,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
+
+# Hide desktop icons
+defaults write com.apple.finder CreateDesktop false
 
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
@@ -131,6 +151,12 @@ defaults write com.apple.screencapture name "screenshot"
 
 # Prevent applications from bouncing in Dock
 defaults write com.apple.dock no-bouncing -bool true
+
+# Set the icon size of Dock items to 72 pixels
+defaults write com.apple.dock tilesize -int 50
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
 
 ###############################################################################
 # Safari & WebKit                                                             #

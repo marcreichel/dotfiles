@@ -1,3 +1,4 @@
 .idea
+.DS_Store
 shell/.yarnrc
 misc/oh-my-zsh-custom/plugins/
