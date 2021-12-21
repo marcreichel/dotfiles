@@ -33,12 +33,6 @@ git checkout d6a36b1 agnoster.zsh-theme
 cd ~/.dotfiles/shell
 chmod +x z.sh
 
-echo 'Configure npm'
-echo '-------------'
-# Create a directory for global packages and tell npm where to store globally installed packages
-mkdir "${HOME}/.npm-packages"
-npm config set prefix "${HOME}/.npm-packages"
-
 echo 'Install homebrew'
 echo '----------------'
 echo install homebrew
@@ -50,6 +44,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 echo 'Install node'
 echo '------------'
 brew install node
+
+echo 'Configure npm'
+echo '-------------'
+# Create a directory for global packages and tell npm where to store globally installed packages
+mkdir "${HOME}/.npm-packages"
+npm config set prefix "${HOME}/.npm-packages"
 
 echo 'Install pkg-config'
 brew install pkg-config

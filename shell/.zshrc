@@ -80,3 +80,6 @@ export PATH=$HOME/.yarn/bin:$PATH
 
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export PNPM_HOME="/Users/marc/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
