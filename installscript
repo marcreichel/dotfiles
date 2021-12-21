@@ -51,6 +51,10 @@ echo '-------------'
 mkdir "${HOME}/.npm-packages"
 npm config set prefix "${HOME}/.npm-packages"
 
+echo 'Install gitmoji-cli'
+echo '-------------------'
+npm i -g gitmoji-cli
+
 echo 'Install pkg-config'
 brew install pkg-config
 
