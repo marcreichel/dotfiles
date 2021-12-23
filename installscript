@@ -70,10 +70,6 @@ echo 'Install jq'
 echo '----------'
 brew install jq
 
-echo 'Install some nice quicklook plugins'
-echo '-----------------------------------'
-brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip suspicious-package
-
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
