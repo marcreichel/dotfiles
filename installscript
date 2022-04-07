@@ -126,6 +126,10 @@ echo 'Install Affinity Photo'
 echo '----------------------'
 brew install --cask affinity-photo
 
+echo 'Install Affinity Designer'
+echo '-------------------------'
+brew install --cask affinity-designer
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
