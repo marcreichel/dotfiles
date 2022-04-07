@@ -130,6 +130,10 @@ echo 'Install Affinity Designer'
 echo '-------------------------'
 brew install --cask affinity-designer
 
+echo 'Install Scroll Reverser'
+echo '-----------------------'
+brew install --cask scroll-reverser
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
