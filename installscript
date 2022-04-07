@@ -122,6 +122,10 @@ echo 'Install Enpass'
 echo '--------------'
 brew install --cask enpass
 
+echo 'Install Affinity Photo'
+echo '----------------------'
+brew install --cask affinity-photo
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
