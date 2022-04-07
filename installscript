@@ -118,6 +118,10 @@ echo 'Install TablePlus'
 echo '-----------------'
 brew install --cask tableplus
 
+echo 'Install Enpass'
+echo '--------------'
+brew install --cask enpass
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
