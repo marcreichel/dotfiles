@@ -98,6 +98,10 @@ echo 'Install Raycast'
 echo '---------------'
 brew install --cask raycast
 
+echo 'Install Postman'
+echo '---------------'
+brew install --cask postman
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
