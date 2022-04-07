@@ -102,6 +102,10 @@ echo 'Install Postman'
 echo '---------------'
 brew install --cask postman
 
+echo 'Install Ray'
+echo '-----------'
+brew install --cask ray
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
