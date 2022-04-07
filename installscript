@@ -70,6 +70,10 @@ echo 'Install GitHub Desktop'
 echo '----------------------'
 brew install --cask github
 
+echo 'Install PHPStorm'
+echo '----------------'
+brew install --cask phpstorm
+
 echo 'Install jq'
 echo '----------'
 brew install jq
