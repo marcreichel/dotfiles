@@ -118,11 +118,6 @@ echo 'Install imagemagick'
 echo '-------------------'
 brew install imagemagick
 
-echo 'Install PHP Monitor'
-echo '-------------------'
-brew tap nicoverbruggen/homebrew-cask
-brew install --cask phpmon
-
 echo 'Install imagick'
 echo '---------------'
 pecl install imagick
@@ -143,6 +138,11 @@ echo 'Install laravel valet'
 echo '---------------------'
 composer global require laravel/valet
 valet install
+
+echo 'Install PHP Monitor'
+echo '-------------------'
+brew tap nicoverbruggen/homebrew-cask
+brew install --cask phpmon
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
