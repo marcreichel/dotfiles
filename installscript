@@ -110,6 +110,10 @@ echo 'Install Tinkerwell'
 echo '------------------'
 brew install --cask tinkerwell
 
+echo 'Install TablePlus'
+echo '-----------------'
+brew install --cask tableplus
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
