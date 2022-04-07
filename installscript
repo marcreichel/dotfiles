@@ -82,6 +82,10 @@ echo 'Install jq'
 echo '----------'
 brew install jq
 
+echo 'Install gource'
+echo '--------------'
+brew install gource
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
