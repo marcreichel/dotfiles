@@ -78,6 +78,10 @@ echo 'Install Google Chrome'
 echo '---------------------'
 brew install --cask google-chrome
 
+echo 'Install Firefox'
+echo '---------------'
+brew install --cask firefox
+
 echo 'Install jq'
 echo '----------'
 brew install jq
