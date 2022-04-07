@@ -74,6 +74,10 @@ echo 'Install PHPStorm'
 echo '----------------'
 brew install --cask phpstorm
 
+echo 'Install Google Chrome'
+echo '---------------------'
+brew install --cask google-chrome
+
 echo 'Install jq'
 echo '----------'
 brew install jq
