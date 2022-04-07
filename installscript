@@ -90,6 +90,10 @@ echo 'Install DBngin'
 echo '--------------'
 brew install --cask dbngin
 
+echo 'Install Gitify'
+echo '--------------'
+brew install --cask gitify
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
