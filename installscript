@@ -94,6 +94,10 @@ echo 'Install Gitify'
 echo '--------------'
 brew install --cask gitify
 
+echo 'Install Raycast'
+echo '---------------'
+brew install --cask raycast
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
