@@ -66,6 +66,10 @@ echo 'Install GitHub CLI'
 echo '------------------'
 brew install gh
 
+echo 'Install GitHub Desktop'
+echo '----------------------'
+brew install --cask github
+
 echo 'Install jq'
 echo '----------'
 brew install jq
