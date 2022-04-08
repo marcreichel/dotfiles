@@ -114,6 +114,10 @@ echo 'Install Tinkerwell'
 echo '------------------'
 brew install --cask tinkerwell
 
+echo 'Install HELO'
+echo '------------'
+brew install --cask helo
+
 echo 'Install TablePlus'
 echo '-----------------'
 brew install --cask tableplus
