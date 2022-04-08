@@ -134,6 +134,10 @@ echo 'Install Scroll Reverser'
 echo '-----------------------'
 brew install --cask scroll-reverser
 
+echo 'Install GPG Suite (without Mail)'
+echo '--------------------------------'
+brew install --cask gpg-suite-no-mail
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
