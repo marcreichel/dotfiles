@@ -118,6 +118,10 @@ echo 'Install HELO'
 echo '------------'
 brew install --cask helo
 
+echo 'Install Invoker'
+echo '---------------'
+brew install --cask invoker
+
 echo 'Install TablePlus'
 echo '-----------------'
 brew install --cask tableplus
