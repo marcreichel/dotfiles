@@ -94,6 +94,10 @@ echo 'Install DBngin'
 echo '--------------'
 brew install --cask dbngin
 
+echo 'Install MariaDB'
+echo '---------------'
+brew install mariadb
+
 echo 'Install Gitify'
 echo '--------------'
 brew install --cask gitify
