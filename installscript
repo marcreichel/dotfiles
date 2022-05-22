@@ -90,13 +90,10 @@ echo 'Install gource'
 echo '--------------'
 brew install gource
 
-echo 'Install DBngin'
-echo '--------------'
-brew install --cask dbngin
-
 echo 'Install MariaDB'
 echo '---------------'
 brew install mariadb
+brew services start mariadb
 
 echo 'Install Gitify'
 echo '--------------'
