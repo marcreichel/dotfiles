@@ -17,9 +17,9 @@ function pf() {
 
 function a() {
   if [ -f artisan ]; then
-    php artisan "$0"
+    php artisan "$@"
   else
-    php console.php "$0"
+    php console.php "$@"
   fi
 }
 
