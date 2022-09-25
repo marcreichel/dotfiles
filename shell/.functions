@@ -15,6 +15,14 @@ function pf() {
   fi
 }
 
+function a() {
+  if [ -f artisan ]; then
+    php artisan "$0"
+  else
+    php console.php "$0"
+  fi
+}
+
 # Docker
 function ssh-docker() {
   docker exec -it "$@" bash
