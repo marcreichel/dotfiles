@@ -147,6 +147,10 @@ echo 'Install GPG Suite (without Mail)'
 echo '--------------------------------'
 brew install --cask gpg-suite-no-mail
 
+echo 'Install git-quick-stats'
+echo '-----------------------'
+brew install --cask git-quick-stats
+
 echo 'Install php'
 echo '-----------'
 brew install php@8.0
