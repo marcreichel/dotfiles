@@ -15,6 +15,10 @@ function pf() {
   fi
 }
 
+function gdiff() {
+  git diff --stat $(git merge-base --fork-point "$@")
+}
+
 function a() {
   if [ -f artisan ]; then
     php artisan "$@"
