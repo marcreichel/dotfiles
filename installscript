@@ -205,6 +205,10 @@ echo 'Install watch'
 echo '-------------'
 brew install watch
 
+echo 'Install pnpm'
+echo '------------'
+brew install pnpm
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
