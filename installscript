@@ -209,6 +209,10 @@ echo 'Install pnpm'
 echo '------------'
 brew install pnpm
 
+echo 'Install Fig'
+echo '-----------'
+brew install fig
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
@@ -221,6 +225,7 @@ echo 'Some optional tidbits'
 
 echo '1. Set some sensible defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
 echo '2. Make a ~/.dotfiles-custom/shell/.aliases for your personal commands'
+echo '3. Make sure to run `fig login` to enable Fig.
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
