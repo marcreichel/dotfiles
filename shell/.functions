@@ -23,7 +23,11 @@ function a() {
   if [ -f artisan ]; then
     php artisan "$@"
   else
-    php console.php "$@"
+    if [ -f console ]; then
+      php console "$@"
+    else
+      php console.php "$@"
+    fi
   fi
 }
 
