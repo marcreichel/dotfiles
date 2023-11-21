@@ -78,7 +78,7 @@ echo 'Install Google Chrome'
 echo '---------------------'
 brew install --cask google-chrome
 
-echo 'Install Firefox'
+echo 'Install Mozilla Firefox'
 echo '---------------'
 brew install --cask firefox
 
@@ -89,15 +89,6 @@ brew install jq
 echo 'Install gource'
 echo '--------------'
 brew install gource
-
-echo 'Install MariaDB'
-echo '---------------'
-brew install mariadb
-brew services start mariadb
-
-echo 'Install Gitify'
-echo '--------------'
-brew install --cask gitify
 
 echo 'Install Raycast'
 echo '---------------'
@@ -209,9 +200,9 @@ echo 'Install pnpm'
 echo '------------'
 brew install pnpm
 
-echo 'Install Fig'
+echo 'Install fzf'
 echo '-----------'
-brew install fig
+brew install fzf
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
