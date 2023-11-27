@@ -204,6 +204,10 @@ echo 'Install fzf'
 echo '-----------'
 brew install fzf
 
+echo 'Install warp'
+echo '------------'
+brew install --cask warp
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
