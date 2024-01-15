@@ -22,6 +22,8 @@ alias gpo"git push origin"
 alias gm="git merge"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gclog="git shortlog -sn --all"
+alias gho="gh browse --web"
+alias ghi="gh issue list --web"
 
 # pnpm
 alias pn=pnpm

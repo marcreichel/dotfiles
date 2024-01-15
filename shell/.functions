@@ -61,6 +61,3 @@ function silent() {
   "$@" > /dev/null
 }
 
-function gho() {
-  gh repo view --web "$@"
-}
