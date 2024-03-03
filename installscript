@@ -208,6 +208,10 @@ echo 'Install warp'
 echo '------------'
 brew install --cask warp
 
+echo 'Install zoxide'
+echo '--------------'
+brew install zoxide
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
