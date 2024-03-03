@@ -34,6 +34,9 @@ alias o="open ."
 # List all files colorized in long format
 alias l="ls -laF"
 
+# Get command history by usage
+alias chistory="history | awk '{print \$2}' | sort | uniq -c | sort -nr | head -10"
+
 # PhpStorm
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 
