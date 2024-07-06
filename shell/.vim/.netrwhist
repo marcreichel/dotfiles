@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/marcreichel/.dotfiles-custom'
+let g:netrw_dirhist_4='/Users/marcreichel/.dotfiles'
+let g:netrw_dirhist_3='/Users/marcreichel/.config/tinkerwell/agp-tinkerwell-driver/.git'
 let g:netrw_dirhist_2='/opt/homebrew/Cellar/php@8.1/8.1.16/share/php@8.1/pear'
 let g:netrw_dirhist_1='/Users/marcreichel/Development/agp-test-81/project/module_system/system/config'

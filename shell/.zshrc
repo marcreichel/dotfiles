@@ -86,6 +86,7 @@ ssh-add -A 2>/dev/null;
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.yarn/bin:$PATH
+export PATH=$HOME/bin:~/.config/phpmon/bin:$PATH
 
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -96,8 +97,6 @@ export PATH="$PNPM_HOME:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-unset AGP_ENV
-
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
@@ -106,3 +105,4 @@ unset AGP_ENV
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 eval "$(zoxide init zsh --cmd cd)"
+
