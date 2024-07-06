@@ -212,6 +212,10 @@ echo 'Install zoxide'
 echo '--------------'
 brew install zoxide
 
+echo 'Install Ollama'
+brew install ollama
+brew services start ollama
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
