@@ -219,6 +219,9 @@ brew services start ollama
 echo 'Install bat'
 brew install bat
 
+echo 'Install git-delta'
+brew install git-delta
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
