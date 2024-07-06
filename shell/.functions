@@ -61,3 +61,10 @@ function silent() {
   "$@" > /dev/null
 }
 
+
+# Check weather
+function wttr() {
+  location="$1"
+
+  curl "wttr.in/${location}?lang=de"
+}
