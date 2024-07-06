@@ -61,6 +61,9 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Restart touch bar
 alias touchbar="killall ControlStrip"
 
+# TheFuck
+eval $(thefuck --alias)
+
 # eza
 alias ls="eza --color=always --long --git --no-filesize --no-time --no-user --no-permissions"
 
