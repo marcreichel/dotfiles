@@ -225,6 +225,9 @@ brew install git-delta
 echo 'Install eza'
 brew install eza
 
+echo 'Install btop'
+brew install btop
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
