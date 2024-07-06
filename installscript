@@ -216,6 +216,9 @@ echo 'Install Ollama'
 brew install ollama
 brew services start ollama
 
+echo 'Install bat'
+brew install bat
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
