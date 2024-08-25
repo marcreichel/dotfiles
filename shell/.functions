@@ -21,12 +21,12 @@ function gdiff() {
 
 function a() {
   if [ -f artisan ]; then
-    php artisan "$@"
+    valet php artisan "$@"
   else
     if [ -f console ]; then
-      php console "$@"
+      valet php console "$@"
     else
-      php console.php "$@"
+      valet php console.php "$@"
     fi
   fi
 }
