@@ -51,6 +51,10 @@ echo '-------------'
 mkdir "${HOME}/.npm-packages"
 npm config set prefix "${HOME}/.npm-packages"
 
+echo 'Install pnpm'
+echo '------------'
+brew install pnpm
+
 echo 'Install gitmoji-cli'
 echo '-------------------'
 npm i -g gitmoji-cli
@@ -66,10 +70,6 @@ echo 'Install GitHub CLI'
 echo '------------------'
 brew install gh
 
-echo 'Install GitHub Desktop'
-echo '----------------------'
-brew install --cask github
-
 echo 'Install PHPStorm'
 echo '----------------'
 brew install --cask phpstorm
@@ -79,8 +79,12 @@ echo '---------------------'
 brew install --cask google-chrome
 
 echo 'Install Mozilla Firefox'
-echo '---------------'
+echo '-----------------------'
 brew install --cask firefox
+
+echo 'Install Brave Browser'
+echo '---------------------'
+brew install --cask brave-browser
 
 echo 'Install jq'
 echo '----------'
@@ -144,8 +148,9 @@ brew install --cask git-quick-stats
 
 echo 'Install php'
 echo '-----------'
-brew install php@8.0
-brew link --overwrite --force php@8.0
+brew install php@8.2
+brew install php@8.3
+brew link --overwrite --force php@8.2
 
 echo 'Install composer'
 echo '----------------'
@@ -196,10 +201,6 @@ echo 'Install watch'
 echo '-------------'
 brew install watch
 
-echo 'Install pnpm'
-echo '------------'
-brew install pnpm
-
 echo 'Install fzf'
 echo '-----------'
 brew install fzf
@@ -213,20 +214,57 @@ echo '--------------'
 brew install zoxide
 
 echo 'Install Ollama'
+echo '--------------'
 brew install ollama
 brew services start ollama
 
 echo 'Install bat'
+echo '-----------'
 brew install bat
 
 echo 'Install git-delta'
+echo '-----------------'
 brew install git-delta
 
 echo 'Install eza'
+echo '-----------'
 brew install eza
 
 echo 'Install btop'
+echo '------------'
 brew install btop
+
+echo 'Install Signal'
+echo '--------------'
+brew install --cask signal
+
+echo 'Install Home Assistant Companion App'
+echo '------------------------------------'
+brew install --cask home-assistant
+
+echo 'Install Multitouch'
+echo '------------------'
+brew install --cask multitouch
+
+echo 'Install dbngin'
+echo '--------------'
+brew install --cask dbngin
+
+echo 'Install scroll-reverser'
+echo '-----------------------'
+brew install --cask scroll-reverser
+
+echo 'Install OpenVPN Connect'
+echo '-----------------------'
+brew install --cask openvpn-connect
+
+echo 'Install Raspberry Pi Imager'
+echo '---------------------------'
+brew install --cask raspberry-pi-imager
+
+echo 'Install DeskPad'
+echo '---------------'
+brew install --cask deskpad
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
