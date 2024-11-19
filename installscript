@@ -5,10 +5,6 @@ touch $HOME/.hushlogin
 
 homedir='/Users/$(whoami)/'
 
-echo 'Install GIT'
-echo '-----------'
-brew install git
-
 # Install zsh
 echo 'Install oh-my-zsh'
 echo '-----------------'
