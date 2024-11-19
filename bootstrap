@@ -18,7 +18,7 @@ function bootstrapTerminal() {
 
   cd ~
 
-  git clone git@github.com:marcreichel/dotfiles.git .dotfiles
+  git clone https://github.com/marcreichel/dotfiles.git .dotfiles
 
   source ~/.dotfiles/installscript
 }
