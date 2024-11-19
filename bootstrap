@@ -1,9 +1,25 @@
 #!/bin/bash
-#
+
 # bootstrap installs things.
 
 function bootstrapTerminal() {
   sudo -v # ask password beforehand
+  echo 'Install homebrew'
+  echo '----------------'
+  echo install homebrew
+  sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $homedir
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  echo 'Install GIT'
+  echo '-----------'
+  brew install git
+
+  cd ~
+
+  git clone git@github.com:marcreichel/dotfiles.git .dotfiles
+
   source ~/.dotfiles/installscript
 }
 

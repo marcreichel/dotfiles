@@ -33,14 +33,6 @@ git checkout d6a36b1 agnoster.zsh-theme
 cd ~/.dotfiles/shell
 chmod +x z.sh
 
-echo 'Install homebrew'
-echo '----------------'
-echo install homebrew
-sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $homedir
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 echo 'Install node'
 echo '------------'
 brew install node
