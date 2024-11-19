@@ -1,19 +1,18 @@
 # PHP
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"
-alias ar="php artisan remote"
-alias c="composer"
-alias cu="composer update"
-alias cr="composer require"
-alias ci="composer install"
-alias cda="composer dump-autoload -o"
+alias ar="valet php artisan remote"
+alias c="valet composer"
+alias cu="valet composer update"
+alias cr="valet composer require"
+alias ci="valet composer install"
+alias cda="valet composer dump-autoload -o"
 alias larastan="vendor/bin/phpstan analyse"
 alias hostfile="sudo vi /etc/hosts"
-alias mfs="php artisan migrate:fresh --seed"
-alias nah="git reset --hard;git clean -df"
+alias mfs="valet php artisan migrate:fresh --seed"
 
-alias pp="php artisan test --parallel"
-alias d="php artisan dusk"
+alias pp="valet php artisan test --parallel"
+alias d="valet php artisan dusk"
 alias sshconfig="vi ~/.ssh/config"
 
 # Git
@@ -24,6 +23,7 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias gclog="git shortlog -sn --all"
 alias gho="gh browse --web"
 alias ghi="gh issue list --web"
+alias nah="git reset --hard;git clean -df"
 
 # pnpm
 alias pn=pnpm
