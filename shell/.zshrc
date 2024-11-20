@@ -1,14 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_CUSTOM=$HOME/.dotfiles/misc/oh-my-zsh-custom
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
 # Hide username in prompt
 DEFAULT_USER=`whoami`
 
@@ -93,5 +85,8 @@ export PATH="$PNPM_HOME:$PATH"
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
+eval "$(thefuck --alias FUCK)"
 eval "$(zoxide init zsh --cmd cd)"
 
+
+eval $(thefuck --alias)
