@@ -68,3 +68,8 @@ function wttr() {
 
   curl "wttr.in/${location}?lang=de"
 }
+
+# Get all changed (and still existing) files according to a defined base branch
+function changed-files() {
+    git diff --name-only "$1" | grep -xFf <(git ls-files) | tr '\n' ' '
+}
