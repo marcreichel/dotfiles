@@ -64,3 +64,5 @@ alias touchbar="killall ControlStrip"
 # eza
 alias ls="eza --color=always --long --git --no-filesize --no-time --no-user --no-permissions"
 
+# mcp inspector
+alias mcpi="npx @modelcontextprotocol/inspector"
