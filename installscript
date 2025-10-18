@@ -258,6 +258,10 @@ echo 'Install DeskPad'
 echo '---------------'
 brew install --cask deskpad
 
+echo 'Install BambuStudio'
+echo '-------------------'
+brew install --cask bambu-studio
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
