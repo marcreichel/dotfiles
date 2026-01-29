@@ -118,13 +118,9 @@ echo 'Install Enpass'
 echo '--------------'
 brew install --cask enpass
 
-echo 'Install Affinity Photo'
-echo '----------------------'
-brew install --cask affinity-photo
-
-echo 'Install Affinity Designer'
-echo '-------------------------'
-brew install --cask affinity-designer
+echo 'Install Affinity'
+echo '----------------'
+brew install --cask affinity
 
 echo 'Install Scroll Reverser'
 echo '-----------------------'
