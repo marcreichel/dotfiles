@@ -24,6 +24,7 @@ alias gclog="git shortlog -sn --all"
 alias gho="gh browse --web"
 alias ghi="gh issue list --web"
 alias nah="git reset --hard;git clean -df"
+alias gclean="git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -d"
 
 # pnpm
 alias pn=pnpm
