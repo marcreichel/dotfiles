@@ -86,7 +86,19 @@ export PATH="$PNPM_HOME:$PATH"
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
 eval "$(thefuck --alias FUCK)"
-eval "$(zoxide init zsh --cmd cd)"
 
 
 eval $(thefuck --alias)
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+export NODE_EXTRA_CA_CERTS="$HOME/.config/valet/CA/LaravelValetCASelfSigned.pem"
+
+export CLAUDE_CODE_NO_FLICKER=1
+
+source ~/agp-completions.sh
+
+# zoxide must be initialized at the very end of this file
+eval "$(zoxide init zsh --cmd cd)"
+
+# Created by `pipx` on 2026-09-26 22:39:35
+export PATH="$PATH:/Users/marc/.local/bin"
