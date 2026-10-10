@@ -108,6 +108,17 @@
       "effortLevel": "medium"
     }
   },
+  "pluginConfigs": {
+    "laya-router@laya-router": {
+      "options": {
+        "enableFable": true,
+        "haikuEffort": "low",
+        "sonnetEffort": "medium",
+        "opusEffort": "high",
+        "fableEffort": "xhigh"
+      }
+    }
+  },
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "editorMode": "normal",
@@ -146,12 +157,5 @@
       "**Org-specific CLIs**: None configured"
     ]
   },
-  "voiceEnabled": false,
-  "pluginConfigs": {
-    "laya-router@laya-router": {
-      "options": {
-        "layaUrl": "http://localhost:8000"
-      }
-    }
-  }
+  "voiceEnabled": false
 }
