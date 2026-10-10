@@ -3,15 +3,20 @@
 # Hide "last login" line when starting a new terminal session
 touch $HOME/.hushlogin
 
+echo 'Install Homebrew packages'
+echo '-------------------------'
+brew bundle --file=$HOME/.dotfiles/Brewfile
+
 # Install zsh
 echo 'Install oh-my-zsh'
 echo '-----------------'
 rm -rf $HOME/.oh-my-zsh
 RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Add global gitignore
+# Symlink git prefs (machine-specific settings go into ~/.gitconfig.local)
 ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
-git config --global core.excludesfile $HOME/.global-gitignore
+rm $HOME/.gitconfig
+ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
 
 # Symlink zsh prefs
 rm $HOME/.zshrc
@@ -27,19 +32,11 @@ ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 cd ~/.dotfiles/shell
 chmod +x z.sh
 
-echo 'Install node'
-echo '------------'
-brew install node
-
 echo 'Configure npm'
 echo '-------------'
 # Create a directory for global packages and tell npm where to store globally installed packages
 mkdir "${HOME}/.npm-packages"
 npm config set prefix "${HOME}/.npm-packages"
-
-echo 'Install pnpm'
-echo '------------'
-brew install pnpm
 
 echo 'Install gitmoji-cli'
 echo '-------------------'
@@ -57,92 +54,9 @@ echo 'Install @kaitranntt/ccs'
 echo '-----------------------'
 npm i -g @kaitranntt/ccs
 
-echo 'Install pkg-config'
-brew install pkg-config
-
-echo 'Install wget'
-echo '------------'
-brew install wget
-
-echo 'Install GitHub CLI'
-echo '------------------'
-brew install gh
-
-echo 'Install PHPStorm'
-echo '----------------'
-brew install --cask phpstorm
-
-echo 'Install Google Chrome'
-echo '---------------------'
-brew install --cask google-chrome
-
-echo 'Install Mozilla Firefox'
-echo '-----------------------'
-brew install --cask firefox
-
-echo 'Install Brave Browser'
-echo '---------------------'
-brew install --cask brave-browser
-
-echo 'Install jq'
-echo '----------'
-brew install jq
-
-echo 'Install gource'
-echo '--------------'
-brew install gource
-
-echo 'Install Raycast'
-echo '---------------'
-brew install --cask raycast
-
-echo 'Install Ray'
-echo '-----------'
-brew install --cask ray
-
-echo 'Install Tinkerwell'
-echo '------------------'
-brew install --cask tinkerwell
-
-echo 'Install HELO'
-echo '------------'
-brew install --cask helo
-
-echo 'Install Invoker'
-echo '---------------'
-brew install --cask invoker
-
-echo 'Install Enpass'
-echo '--------------'
-brew install --cask enpass
-
-echo 'Install Affinity'
-echo '----------------'
-brew install --cask affinity
-
-echo 'Install Scroll Reverser'
-echo '-----------------------'
-brew install --cask scroll-reverser
-
-echo 'Install GPG Suite (without Mail)'
-echo '--------------------------------'
-brew install --cask gpg-suite-no-mail
-
-echo 'Install php'
-echo '-----------'
-brew install php@8.2
-brew install php@8.3
-brew install php@8.4
-brew install pie
+echo 'Link php'
+echo '--------'
 brew link --overwrite --force php@8.4
-
-echo 'Install composer'
-echo '----------------'
-brew install composer
-
-echo 'Install imagemagick'
-echo '-------------------'
-brew install imagemagick
 
 echo 'Install imagick'
 echo '---------------'
@@ -205,215 +119,9 @@ echo 'Install shipmonk/composer-dependency-analyser'
 echo '---------------------------------------------'
 composer global require shipmonk/composer-dependency-analyser
 
-echo 'Install PHP Monitor'
-echo '-------------------'
-brew tap nicoverbruggen/homebrew-cask
-brew install --cask phpmon
-
-echo 'Install watch'
-echo '-------------'
-brew install watch
-
-echo 'Install fzf'
-echo '-----------'
-brew install fzf
-
-echo 'Install warp'
-echo '------------'
-brew install --cask warp
-
-echo 'Install zoxide'
-echo '--------------'
-brew install zoxide
-
-echo 'Install Ollama'
-echo '--------------'
-brew install ollama
-brew services start ollama
-
-echo 'Install bat'
-echo '-----------'
-brew install bat
-
-echo 'Install git-delta'
-echo '-----------------'
-brew install git-delta
-
-echo 'Install eza'
-echo '-----------'
-brew install eza
-
-echo 'Install btop'
-echo '------------'
-brew install btop
-
-echo 'Install Signal'
-echo '--------------'
-brew install --cask signal
-
-echo 'Install Home Assistant Companion App'
-echo '------------------------------------'
-brew install --cask home-assistant
-
-echo 'Install Multitouch'
-echo '------------------'
-brew install --cask multitouch
-
-echo 'Install OpenVPN Connect'
-echo '-----------------------'
-brew install --cask openvpn-connect
-
-echo 'Install Raspberry Pi Imager'
-echo '---------------------------'
-brew install --cask raspberry-pi-imager
-
-echo 'Install DeskPad'
-echo '---------------'
-brew install --cask deskpad
-
-echo 'Install BambuStudio'
-echo '-------------------'
-brew install --cask bambu-studio
-
-echo 'Install docker'
-echo '--------------'
-brew install docker
-
-echo 'Install docker-compose'
-echo '----------------------'
-brew install docker-compose
-
-echo 'Install phpantom-lsp'
-echo '--------------------'
-brew install phpantom-lsp
-
-echo 'Install thefuck'
-echo '---------------'
-brew install thefuck
-
-echo 'Install rust'
-echo '------------'
-brew install rust
-
-echo 'Install pipx'
-echo '------------'
-brew install pipx
-
-echo 'Install ffmpeg'
-echo '--------------'
-brew install ffmpeg
-
-echo 'Install yt-dlp'
-echo '--------------'
-brew install yt-dlp
-
-echo 'Install poppler'
-echo '---------------'
-brew install poppler
-
-echo 'Install typos-cli'
-echo '-----------------'
-brew install typos-cli
-
-echo 'Install dprint'
-echo '--------------'
-brew install dprint
-
-echo 'Install fswatch'
-echo '---------------'
-brew install fswatch
-
-echo 'Install dolt'
-echo '------------'
-brew install dolt
-
-echo 'Install meilisearch'
-echo '-------------------'
-brew install meilisearch
-
-echo 'Install mysql'
-echo '-------------'
-brew install mysql
-
-echo 'Install claude-code@latest'
-echo '--------------------------'
-brew install --cask claude-code@latest
-
-echo 'Install copilot-cli'
-echo '-------------------'
-brew install --cask copilot-cli
-
-echo 'Install coderabbit'
-echo '------------------'
-brew install --cask coderabbit
-
-echo 'Install githubmonitor'
-echo '---------------------'
-brew install --cask githubmonitor
-
-echo 'Install chromedriver'
-echo '--------------------'
-brew install --cask chromedriver
-
-echo 'Install trackweight'
-echo '-------------------'
-brew install --cask trackweight
-
-echo 'Install jetbrains-toolbox'
-echo '-------------------------'
-brew install --cask jetbrains-toolbox
-
-echo 'Install claude'
-echo '--------------'
-brew install --cask claude
-
-echo 'Install chatgpt'
-echo '---------------'
-brew install --cask chatgpt
-
-echo 'Install cmux'
-echo '------------'
-brew install --cask cmux
-
-echo 'Install microsoft-teams'
-echo '-----------------------'
-brew install --cask microsoft-teams
-
-echo 'Install tailscale-app'
-echo '---------------------'
-brew install --cask tailscale-app
-
-echo 'Install obsidian'
-echo '----------------'
-brew install --cask obsidian
-
-echo 'Install crossover'
-echo '-----------------'
-brew install --cask crossover
-
-echo 'Install blender'
-echo '---------------'
-brew install --cask blender
-
-echo 'Install comfy'
-echo '-------------'
-brew install --cask comfy
-
-echo 'Install steam'
-echo '-------------'
-brew install --cask steam
-
-echo 'Install zen'
-echo '-----------'
-brew install --cask zen
-
-echo 'Install vlc'
-echo '-----------'
-brew install --cask vlc
-
-echo 'Install hiddenbar'
-echo '-----------------'
-brew install --cask hiddenbar
+echo 'Enable Touch ID for sudo'
+echo '------------------------'
+sed 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
