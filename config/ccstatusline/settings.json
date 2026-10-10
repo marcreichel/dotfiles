@@ -1,0 +1,80 @@
+{
+  "version": 4,
+  "lines": [
+    [
+      {
+        "id": "1b5d891c-37b5-40fe-9e8f-39d0b0ab7bc9",
+        "type": "model",
+        "color": "gradient:atlas"
+      },
+      {
+        "id": "8f2bce3c-6020-44df-9c61-11ba078a5e97",
+        "type": "context-bar",
+        "color": "gradient:atlas",
+        "bold": false
+      },
+      {
+        "id": "40bd7797-8263-4459-83c0-64f3cc4ab2df",
+        "type": "session-cost",
+        "color": "gradient:atlas"
+      }
+    ],
+    [
+      {
+        "id": "060b4088-99f3-403a-943c-7f647a92479c",
+        "type": "reset-timer",
+        "color": "gradient:atlas",
+        "rawValue": false
+      },
+      {
+        "id": "e4579a1e-49e5-4711-b0ca-7f6f558081bb",
+        "type": "session-usage",
+        "color": "gradient:atlas",
+        "rawValue": false
+      },
+      {
+        "id": "d248847c-3116-4894-8cd7-9fe0c5f5e50c",
+        "type": "weekly-usage",
+        "color": "gradient:atlas",
+        "rawValue": false
+      }
+    ],
+    [
+      {
+        "id": "f37df3ff-8719-4c50-9128-7e58c9777327",
+        "type": "git-branch",
+        "color": "gradient:atlas",
+        "rawValue": false
+      },
+      {
+        "id": "daa863fa-cafb-40b1-b292-dfe02b5635c9",
+        "type": "custom-command",
+        "color": "gradient:atlas",
+        "commandPath": "[ -f .projectrc ] && sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' .projectrc || echo \"-\""
+      }
+    ]
+  ],
+  "flexMode": "full",
+  "compactThreshold": 60,
+  "colorLevel": 3,
+  "defaultSeparator": " / ",
+  "defaultPadding": "",
+  "defaultPaddingSide": "both",
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "gitCacheTtlSeconds": 5,
+  "minimalistMode": true,
+  "powerline": {
+    "enabled": false,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [],
+    "autoAlign": false,
+    "continueThemeAcrossLines": false
+  }
+}

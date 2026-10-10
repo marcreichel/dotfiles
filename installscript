@@ -28,6 +28,19 @@ ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
 rm $HOME/.vim
 ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 
+# Symlink app configs
+for f in gh/config.yml ccstatusline/settings.json btop/btop.conf; do
+  mkdir -p "$HOME/.config/$(dirname $f)"
+  ln -sf "$HOME/.dotfiles/config/$f" "$HOME/.config/$f"
+done
+
+# Symlink Claude Code settings and personal skills
+mkdir -p $HOME/.claude/skills
+ln -sf $HOME/.dotfiles/claude/settings.json $HOME/.claude/settings.json
+for skill in $HOME/.dotfiles/claude/skills/*; do
+  ln -sfn "$skill" "$HOME/.claude/skills/$(basename "$skill")"
+done
+
 # Activate z
 cd ~/.dotfiles/shell
 chmod +x z.sh
@@ -130,7 +143,7 @@ echo 'Some optional tidbits'
 
 echo '1. Set some sensible defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
 echo '2. Make a ~/.dotfiles-custom/shell/.aliases for your personal commands'
-echo '3. Install manually (no cask): Polyscope, Solo, HomeClaw, DoltWorkbench, Amphetamine (App Store), Glaze, Orca'
+echo '3. Install manually (no cask): Polyscope, Solo, HomeClaw, DoltWorkbench, Amphetamine (App Store), Glaze'
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
