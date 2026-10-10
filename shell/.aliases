@@ -17,7 +17,7 @@ alias sshconfig="vi ~/.ssh/config"
 
 # Git
 alias gc="git checkout"
-alias gpo"git push origin"
+alias gpo="git push origin"
 alias gm="git merge"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gclog="git shortlog -sn --all"
@@ -56,11 +56,7 @@ alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias lock="osascript -e 'tell application \"System Events\" to keystroke \"q\" using {command down, control down}'"
 
 # Empty the Trash on all mounted volumes and the main HDD
-# Also, clear Apple’s System Logs to improve shell startup speed
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
-
-# Restart touch bar
-alias touchbar="killall ControlStrip"
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash"
 
 # eza
 alias ls="eza --color=always --long --git --no-filesize --no-time --no-user --no-permissions"

@@ -5,13 +5,10 @@ ZSH=$HOME/.oh-my-zsh
 DEFAULT_USER=`whoami`
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.dotfiles/misc/oh-my-zsh-custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git laravel4 laravel5 composer macos vagrant)
+plugins=(git composer macos)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=Users/$DEFAULT_USER/.rvm/gems/ruby-2.1.2/bin:$PATH
 # set numeric keys
 # 0 . Enter
 bindkey -s "^[0p" "0"
@@ -46,10 +43,6 @@ for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,zshrc}; do
 done
 unset file
 
-# Load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-export PATH="$PATH:$HOME/.rvm/bin"
 . $HOME/.dotfiles/shell/z.sh
 
 # Sudoless npm https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
@@ -59,36 +52,19 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
-export PATH=$HOME/.dotfiles/bin:$PATH
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
-
 # Import ssh keys in keychain
-ssh-add -A 2>/dev/null;
+ssh-add --apple-load-keychain 2>/dev/null;
 
 # Extra paths
 export PATH=$PATH:/opt/homebrew/bin
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/.yarn/bin:$PATH
-export PATH=$HOME/bin:~/.config/phpmon/bin:$PATH
-
-export PATH="/usr/local/opt/node@12/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH=~/.config/phpmon/bin:$PATH
 
 export PNPM_HOME="/Users/marc/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
-
-eval "$(thefuck --alias FUCK)"
-
-
-eval $(thefuck --alias)
+eval "$(thefuck --alias)"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 export NODE_EXTRA_CA_CERTS="$HOME/.config/valet/CA/LaravelValetCASelfSigned.pem"
@@ -99,6 +75,3 @@ source ~/agp-completions.sh
 
 # zoxide must be initialized at the very end of this file
 eval "$(zoxide init zsh --cmd cd)"
-
-# Created by `pipx` on 2026-09-26 22:39:35
-export PATH="$PATH:/Users/marc/.local/bin"
